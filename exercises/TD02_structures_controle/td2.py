@@ -90,6 +90,19 @@ if nombre < 0:
     print("Mauvais nombre")
 else:
     resultat = 1
-    for i in range(1, nombre + 1):
-        resultat += 1
+    for i in range(1, nombre+1):
+        resultat *= i
     print("factorielle", nombre, "est égale à", resultat)
+
+# Exercice 18
+
+n = int(input("entrez taille"))
+for i in range(1, n+1):
+    print(" ", "*")
+
+# Exercice 19
+
+n = int(input("donnez un entier"))
+resultat, puissance = 0, 0
+while resultat < 1000000:
+    puissance += 1
