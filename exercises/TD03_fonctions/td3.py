@@ -25,7 +25,6 @@ def secondeEnTemps(seconde):
     seconde = seconde % 60
     return (jour, heure, minute, seconde)
 
-
 temps = secondeEnTemps(100000)
 print(temps[0], "jours", temps[1], "heures", temps[2], "minutes", temps[3], "sec")
 
@@ -78,4 +77,27 @@ def proportionTemps(temps, proportion):
     return calcul
 
 afficheTemps(proportionTemps((2, 0, 36, 0), 0.2))
+
 # appeler la fonction en échangeant l'ordre des arguments
+
+# A finir 
+def tempsEnDate(temps):
+    pass
+
+def afficheDate(date = -1):
+    pass
+    
+temps = secondeEnTemps(1000000000)
+afficheTemps(temps)
+afficheDate(tempsEnDate(temps))
+afficheDate()
+
+a, b = 0, 1
+for i in range(0,5):
+    a += 1
+    if a % 3 != 0:
+        continue
+    b *= 2
+print(a, b)
+
+
