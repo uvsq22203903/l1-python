@@ -54,11 +54,18 @@ if annee % 4 == 0 and annee % 100 != 0 or annee % 400 == 0:
 else:
     print("Pas Bisextile")
 
-
-
-# Exercice 6
+# Exercice 6.1
 
 for i in range(1, 11):
+    print(i)
+a = 10
+b = 30
+c = 4
+print(range(a,b,c))
+
+# Exercice 6.2
+
+for i in range(2, 21, 2):
     print(i)
 
 # Exercice 7.1
@@ -81,7 +88,6 @@ while nombre_saisi != -1:
         somme += nombre_saisi
         quantite += 1
 print("La moyenne est", quantite, "nombre est :", somme/quantite)
-"""
 
 # Exercice 8
 
@@ -94,6 +100,50 @@ else:
         resultat *= i
     print("factorielle", nombre, "est égale à", resultat)
 
+# Exercice 9
+
+jour_de_naissance = 0
+reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31"))
+if reponse == 1:
+    jour_de_naissance +=1
+reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)2 3 6 7 10 11 14 15 18 19 22 23 26 27 30 31"))
+if reponse == 1:
+    jour_de_naissance +=2
+reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)4 5 6 7 12 13 14 15 20 21 22 23 28 29 30 31"))
+if reponse == 1:
+    jour_de_naissance +=4
+reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)8 9 10 11 12 13 14 15 24 25 26 27 28 29 30 31"))
+if reponse == 1:
+    jour_de_naissance +=8
+reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"))
+if reponse == 1:
+    jour_de_naissance +=16
+print("Votre jour de naissance est", jour_de_naissance)
+
+# Exercice 10:
+
+import random
+
+num_loterie = random.randint(0, 99)
+print(num_loterie)
+num_utilisateur = int(input("Saisissez un nombre (2chiffres)"))
+num_utilisateur_inverse = lambda num_utilisateur: int(str(num_utilisateur)[::-1])
+if num_utilisateur == num_loterie:
+    recompense = 10000
+elif num_utilisateur_inverse == num_loterie:
+    recompense = 3000
+elif num_utilisateur[0] == num_loterie[0] or num_utilisateur[0] == num_loterie[1] or num_utilisateur[1] == num_loterie[0] or num_utilisateur[1] == num_loterie[1]:
+    recompense = 1000
+
+print("Votre récompense est de", recompense, "€.")"""
+
+# Exercice 11:
+
+entier = int(input("nombre entre 10 et 20 "))
+somme = entier[0] + entier[1]
+print(somme)
+
+"""
 # Exercice 18
 
 n = int(input("entrez taille"))
@@ -106,3 +156,4 @@ n = int(input("donnez un entier"))
 resultat, puissance = 0, 0
 while resultat < 1000000:
     puissance += 1
+"""
