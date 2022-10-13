@@ -135,13 +135,41 @@ elif num_utilisateur_inverse == num_loterie:
 elif num_utilisateur[0] == num_loterie[0] or num_utilisateur[0] == num_loterie[1] or num_utilisateur[1] == num_loterie[0] or num_utilisateur[1] == num_loterie[1]:
     recompense = 1000
 
-print("Votre récompense est de", recompense, "€.")"""
+print("Votre récompense est de", recompense, "€.")
 
 # Exercice 11:
 
-entier = int(input("nombre entre 10 et 20 "))
-somme = entier[0] + entier[1]
-print(somme)
+entier = 18
+somme = 0
+for i in str(entier):
+    somme += int(i)
+print(somme)"""
+
+# Exercice 12.1
+
+import random
+
+nb1 = random.randint(0, 9)
+nb2 = random.randint(0, 9)
+print("Le premier nombre est ,", nb1, "et le 2eme nombre est ", nb2)
+valeur_absolue = abs(nb1 - nb2)
+rep_utilisateur = int(input("Que vaut la valeur absolue ? "))
+while rep_utilisateur != valeur_absolue:
+    rep_utilisateur = int(input("Que vaut la valeur absolue ? "))
+
+# Autre manière de faire
+
+"""while True:
+    rep_utilisateur = int(input("Que vaut la valeur absolue ? "))
+    if rep_utilisateur != valeur_absolue:
+        break"""
+
+print("Bonne réponse")
+
+# Exercice 12.2
+
+nb1, nb2 = random.randint(0.9), random.randint(0.9)
+print("Le premier nombre est ", nb1, "et le 2eme nombre est ", nb2)
 
 """
 # Exercice 18
