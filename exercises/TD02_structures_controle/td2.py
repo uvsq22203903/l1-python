@@ -143,7 +143,7 @@ entier = 18
 somme = 0
 for i in str(entier):
     somme += int(i)
-print(somme)"""
+print(somme)
 
 # Exercice 12.1
 
@@ -159,17 +159,28 @@ while rep_utilisateur != valeur_absolue:
 
 # Autre manière de faire
 
-"""while True:
+while True:
     rep_utilisateur = int(input("Que vaut la valeur absolue ? "))
     if rep_utilisateur != valeur_absolue:
-        break"""
+        break
 
 print("Bonne réponse")
-
+"""
 # Exercice 12.2
+import random
 
-nb1, nb2 = random.randint(0.9), random.randint(0.9)
-print("Le premier nombre est ", nb1, "et le 2eme nombre est ", nb2)
+for tentative in range(5):
+    nb1 = random.randint(0.9)
+    nb2 = random.randint(0.9)
+    print("Le premier nombre est ", nb1, "et le 2eme nombre est ", nb2)
+    valeur_absolue = abs(nb1 - nb2)
+    moyenne_tentative, tentative = 0, 0
+    rep_utilisateur = 0
+    while rep_utilisateur != valeur_absolue:
+        rep_utilisateur = int(input("Que vaut la valeur absolue ? "))
+        tentative += 1
+    moyenne_tentative += tentative
+print("Bonne réponse, votre nombre de tentatives est de ", moyenne_tentative/5)
 
 """
 # Exercice 18
