@@ -1,5 +1,6 @@
+import random
 # Exercice 1
-"""
+
 num1 = 15
 num2 = 5
 if num1 % num2 and num2 % num1:
@@ -21,18 +22,18 @@ else:
 
 # Exercice 3
 
-zodiaque = {    0: "monkey",
-                1: "rooster",
-                2: "dog",
-                3: "pig",
-                4: "rat",
-                5: "ox",
-                6: "tiger",
-                7: "rabbit",
-                8: "dragon",
-                9: "snake",
-                10: "horse",
-                11: "sheep"}
+zodiaque = {0: "monkey",
+            1: "rooster",
+            2: "dog",
+            3: "pig",
+            4: "rat",
+            5: "ox",
+            6: "tiger",
+            7: "rabbit",
+            8: "dragon",
+            9: "snake",
+            10: "horse",
+            11: "sheep"}
 annee = int(input("Donnez une année pour découvrir le signe du zodiaque"))
 x = annee % 12
 print(x)
@@ -40,7 +41,7 @@ print(zodiaque[x])
 
 # Exercice 4
 
-temperature, celsius = -3,7, True
+temperature, celsius = -3, 7, True
 if celsius and temperature <= 0 or not celsius and temperature <= 32:
     print("Freezing !")
 else:
@@ -61,7 +62,7 @@ for i in range(1, 11):
 a = 10
 b = 30
 c = 4
-print(range(a,b,c))
+print(range(a, b, c))
 
 # Exercice 6.2
 
@@ -103,36 +104,49 @@ else:
 # Exercice 9
 
 jour_de_naissance = 0
-reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31"))
+reponse = int(input("votre jour de naissance est-il dans cette liste ?\
+                     (0=non et 1=oui)\
+                     1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31"))
 if reponse == 1:
-    jour_de_naissance +=1
-reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)2 3 6 7 10 11 14 15 18 19 22 23 26 27 30 31"))
+    jour_de_naissance += 1
+reponse = int(input("votre jour de naissance est-il dans cette liste ?\
+                     (0=non et 1=oui)\
+                     2 3 6 7 10 11 14 15 18 19 22 23 26 27 30 31"))
 if reponse == 1:
-    jour_de_naissance +=2
-reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)4 5 6 7 12 13 14 15 20 21 22 23 28 29 30 31"))
+    jour_de_naissance += 2
+reponse = int(input("votre jour de naissance est-il dans cette liste?\
+                     (0=non et 1=oui)\
+                     4 5 6 7 12 13 14 15 20 21 22 23 28 29 30 31"))
 if reponse == 1:
-    jour_de_naissance +=4
-reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)8 9 10 11 12 13 14 15 24 25 26 27 28 29 30 31"))
+    jour_de_naissance += 4
+reponse = int(input("votre jour de naissance est-il dans cette liste ?\
+                     (0=non et 1=oui)\
+                     8 9 10 11 12 13 14 15 24 25 26 27 28 29 30 31"))
 if reponse == 1:
-    jour_de_naissance +=8
-reponse = int(input("votre jour de naissance est-il dans cette liste ? (0=non et 1=oui)16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"))
+    jour_de_naissance += 8
+reponse = int(input("votre jour de naissance est-il dans cette liste ?\
+                     (0=non et 1=oui)\
+                     16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"))
 if reponse == 1:
-    jour_de_naissance +=16
+    jour_de_naissance += 16
 print("Votre jour de naissance est", jour_de_naissance)
 
 # Exercice 10:
 
-import random
 
 num_loterie = random.randint(0, 99)
 print(num_loterie)
 num_utilisateur = int(input("Saisissez un nombre (2chiffres)"))
-num_utilisateur_inverse = lambda num_utilisateur: int(str(num_utilisateur)[::-1])
+num_utilisateur_inverse = lambda num_utilisateur:\
+                          int(str(num_utilisateur)[::-1])
 if num_utilisateur == num_loterie:
     recompense = 10000
 elif num_utilisateur_inverse == num_loterie:
     recompense = 3000
-elif num_utilisateur[0] == num_loterie[0] or num_utilisateur[0] == num_loterie[1] or num_utilisateur[1] == num_loterie[0] or num_utilisateur[1] == num_loterie[1]:
+elif num_utilisateur[0] == num_loterie[0] or\
+     num_utilisateur[0] == num_loterie[1] or\
+     num_utilisateur[1] == num_loterie[0] or\
+     num_utilisateur[1] == num_loterie[1]:
     recompense = 1000
 
 print("Votre récompense est de", recompense, "€.")
@@ -147,7 +161,6 @@ print(somme)
 
 # Exercice 12.1
 
-import random
 
 nb1 = random.randint(0, 9)
 nb2 = random.randint(0, 9)
@@ -165,9 +178,10 @@ while True:
         break
 
 print("Bonne réponse")
-"""
+
 # Exercice 12.2
-import random
+
+
 
 for tentative in range(5):
     nb1 = random.randint(0.9)
@@ -182,7 +196,7 @@ for tentative in range(5):
     moyenne_tentative += tentative
 print("Bonne réponse, votre nombre de tentatives est de ", moyenne_tentative/5)
 
-"""
+
 # Exercice 18
 
 n = int(input("entrez taille"))
@@ -195,4 +209,3 @@ n = int(input("donnez un entier"))
 resultat, puissance = 0, 0
 while resultat < 1000000:
     puissance += 1
-"""
