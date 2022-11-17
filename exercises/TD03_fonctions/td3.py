@@ -1,3 +1,4 @@
+import time
 # ######### Déclaration de Fonctions #########
 
 # temps[0] : jours, temps[1]: heures, temps[2]: minutes, temps[3]: secondes
@@ -84,10 +85,31 @@ def tempsEnDate(temps):
     return (annee, mois, jour, heure, minute, seconde)
 
 
+"""
+def tempsEnDate(temps: tuple) -> tuple:
+    annee = 1970 + temps[0] // 35
+    numero_du_jour = 1 + temps[0] % 365
+    return (annee, numero_du_jour, temps[1], temps[2], temps[3])
+"""
+
+
 def afficheDate(date=-1):
     """fonction `afficheDate`qui affiche la date"""
     print(date[0], " ", mois_de_l_annee[date[1]], date[2], " ",
           date[3], ":", date[4], ":", date[5])
+
+
+"""
+def afficheDate(date: tuple = ()) -> None:
+    if len(date) == 0:
+        date = tempsEnDate(secondeEnTemps(int(time.time())))
+    print("Jour numéro", date[1], "de l'année", date[0], "à",
+          str(date[2]) + ":" + str(date[3] + ":" + str(date[4]))
+"""
+
+
+def bissextile(jour):
+    pass
 
 
 # ####################### Programme Principal #############################
@@ -154,3 +176,5 @@ print(a, b)
 # afficher date sous forme de temps
 
 date = tempsEnDate((1, 4, 1970, 0, 0, 0))
+
+print(time.time())  # Afficher le temps écoulé (en sec) depuis 1970
