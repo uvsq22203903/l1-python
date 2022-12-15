@@ -21,8 +21,8 @@ def texte():
     pen.up()
     pen.setpos(-68, 95)
     pen.down()
-    pen.color('lightgreen')
-    pen.write("Je t'aime doudou <3", font = ("Verdana", 12, "bold"))
+    pen.color('black')
+    pen.write("potato", font = ("Verdana", 12, "bold"))
 
 coeur()
 texte()
