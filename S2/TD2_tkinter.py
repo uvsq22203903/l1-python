@@ -14,8 +14,8 @@ def fermer_fenetre():  # fonction callback qui appelle la fonction destroy()
 
 root = tk.Tk()
 root.title("J'apprends Tkinter")
-root.geometry("400x300")
-caneva = Canvas(root, width = 500, height = 500, bg ='red')
+root.geometry("500x500")
+caneva = Canvas(root, width = 300, height = 300, bg ='white')
 caneva.place(x = 100, y = 100)
 
 # - - - - - - - - - - - - -
