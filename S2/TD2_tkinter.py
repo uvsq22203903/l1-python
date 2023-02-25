@@ -12,7 +12,7 @@ from tkinter import simpledialog
 cpt = 0
 def fermer_fenetre():  # fonction callback qui appelle la fonction destroy()
     root.destroy()
-"""
+
 def compteur(event):
     global cpt
     cpt += 1
@@ -23,7 +23,7 @@ def couleur(event):
         texte['text'] = "Couleur du canvas = Rouge"
     if (event.widget == canevas_noir):
         texte['text'] = "Couleur du canvas = Noir"
-"""
+
 # - - - - - - - - - - - - - - - - - - - - - - - - 
 # Création de la fenêtre de l'interface graphique
 # - - - - - - - - - - - - - - - - - - - - - - - -
@@ -34,7 +34,7 @@ root.title("J'apprends Tkinter")
 # - - - - - - - - - - - - - - - - - -
 # Création des canvas sur une grille
 # - - - - - - - - - - - - - - - - - -
-"""
+
 caneva_rouge = tk.Canvas(root, width = 300, height = 300, bg ='red')
 caneva_rouge.grid(row = 0, column = 1)
 canevas_noir = tk.Canvas(root, width = 300, height = 300, bg ='black')
@@ -56,9 +56,9 @@ bouton.grid(row=0, column=1)
 
 caneva_rouge.bind("<Button-1>", compteur)
 root.bind("<Double-1>", couleur)
+
+
 """
-
-
 create=True
 
 def charger(widg):
@@ -84,6 +84,6 @@ def charger(widg):
 
 bouton = tk.Button(root, text = "Charger", command = lambda : charger(root))
 bouton.place(x = 10, y = 10)
-
+"""
 root.mainloop() # permet de toujours actualiser la fenêtre
 
